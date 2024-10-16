@@ -39,10 +39,10 @@ function createArray(n, m) {
     return result;
 }
 
-let n = 5;
-let m = 10;
+//let n = 5;
+//let m = 10;
 
-print(createArray(n, m));
+print(createArray(5, 10));
 
 /* -----------------------------------------------------------------------------
     Task: B
@@ -53,7 +53,23 @@ print(createArray(n, m));
     Create a function that combines the two arrays into one, but no duplicate values. 
     Use for loops
 */
+addSpacing(1);
 console.log("Task: B");
+
+function combineArrays(array1, array2) {
+    let combinedSet = new Set([...array1, ...array2]);
+
+    return Array.from(combinedSet);
+}
+
+let array1 = createArray(5, 11);
+print("First Array: " + array1);
+
+let array2 = createArray(8, 24);
+print("Second Array: " + array2);
+
+let combinedArray = combineArrays(array1, array2);
+print("Combined Array: " + combinedArray);
 
 
 
