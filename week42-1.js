@@ -27,6 +27,7 @@ for (let index = 0; index < people.length; index++) {
     if n = 5 and m is 10 the returned array sholuld be [5,6,7,8,9]
     Use loops and arrays to achive the goal. 
 */
+//#region Task A
 addSpacing(1);
 console.log("Task: A");
 
@@ -43,7 +44,7 @@ function createArray(n, m) {
 //let m = 10;
 
 print(createArray(5, 10));
-
+//#endregion
 /* -----------------------------------------------------------------------------
     Task: B
     Create two arrays using your function from task a.
@@ -53,6 +54,7 @@ print(createArray(5, 10));
     Create a function that combines the two arrays into one, but no duplicate values. 
     Use for loops
 */
+//#region Task B
 addSpacing(1);
 console.log("Task: B");
 
@@ -70,9 +72,7 @@ print("Second Array: " + array2);
 
 let combinedArray = combineArrays(array1, array2);
 print("Combined Array: " + combinedArray);
-
-
-
+//#endregion
 /* -----------------------------------------------------------------------------
     Task: C
     Following you will find an alphabet a encrypted text and a shift value. 
@@ -83,11 +83,36 @@ print("Combined Array: " + combinedArray);
     - decrypts and returns the message.
     Use arrays and for loops. 
 */
+//#region Task C
+addSpacing(1);
 console.log("Task: C");
 const ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 const message = "ckrr jutk"
 let shift = 6
 
+function decryptMessage(message, alphabet, shift) {
+    let decryptMessage = '';
+    let alphabetArray = alphabet.split('');
+
+    for (let i = 0; i < message.length; i++) {
+        let char = message[i];
+
+        if (char === ' ') {
+            decryptMessage += ' ';
+        } else {
+            let charIndex = alphabetArray.indexOf(char);
+            let newIndex = (charIndex - shift + alphabetArray.length) % alphabetArray.length;
+
+            decryptMessage += alphabetArray[newIndex];
+        }
+    }
+
+    return decryptMessage;
+}
+
+let decryptedMessage = decryptMessage(message, ALPHABET, shift);
+print("Decrypted Message: " + decryptedMessage);
+//#endregion
 /* -----------------------------------------------------------------------------
     Task: D
 
