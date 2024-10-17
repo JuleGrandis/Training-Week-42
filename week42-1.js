@@ -27,6 +27,7 @@ for (let index = 0; index < people.length; index++) {
     if n = 5 and m is 10 the returned array sholuld be [5,6,7,8,9]
     Use loops and arrays to achive the goal. 
 */
+
 //#region Task A
 addSpacing(1);
 console.log("Task: A");
@@ -40,11 +41,10 @@ function createArray(n, m) {
     return result;
 }
 
-//let n = 5;
-//let m = 10;
 
 print(createArray(5, 10));
 //#endregion
+
 /* -----------------------------------------------------------------------------
     Task: B
     Create two arrays using your function from task a.
@@ -54,6 +54,7 @@ print(createArray(5, 10));
     Create a function that combines the two arrays into one, but no duplicate values. 
     Use for loops
 */
+
 //#region Task B
 addSpacing(1);
 console.log("Task: B");
@@ -73,6 +74,7 @@ print("Second Array: " + array2);
 let combinedArray = combineArrays(array1, array2);
 print("Combined Array: " + combinedArray);
 //#endregion
+
 /* -----------------------------------------------------------------------------
     Task: C
     Following you will find an alphabet a encrypted text and a shift value. 
@@ -83,6 +85,7 @@ print("Combined Array: " + combinedArray);
     - decrypts and returns the message.
     Use arrays and for loops. 
 */
+
 //#region Task C
 addSpacing(1);
 console.log("Task: C");
@@ -113,6 +116,7 @@ function decryptMessage(message, alphabet, shift) {
 let decryptedMessage = decryptMessage(message, ALPHABET, shift);
 print("Decrypted Message: " + decryptedMessage);
 //#endregion
+
 /* -----------------------------------------------------------------------------
     Task: D
 
@@ -126,6 +130,7 @@ print("Decrypted Message: " + decryptedMessage);
     -> [3,6]
 
 */
+
 //#region Task D
 addSpacing(1);
 console.log("Task: D");
@@ -155,8 +160,19 @@ print("Pair that sums to target: " + result);
     2 -> 1
     42693 -> 5
 */
+
+//#region Task E
+addSpacing(1);
 console.log("Task: E");
 
+function countDigits(number) {
+    return Math.abs(number).toString().length;
+}
+
+print(countDigits(123));
+print(countDigits(2));
+print(countDigits(42693));
+//#endregion
 
 //#region Util functions
 
