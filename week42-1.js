@@ -126,13 +126,27 @@ print("Decrypted Message: " + decryptedMessage);
     -> [3,6]
 
 */
+//#region Task D
+addSpacing(1);
 console.log("Task: D");
 
 const numbers = [1, 23, 14, 56, 42, 33, 0, 3];
 const target = 36;
 
+function findSumInList(numbers, target) {
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = i + 1; j < numbers.length; j++) {
 
+            if (numbers[i] + numbers[j] === target) {
+                return [numbers[i] + ", " + numbers[j]];
+            }
+        }
+    }
+}
 
+let result = findSumInList(numbers, target);
+print("Pair that sums to target: " + result);
+//#endregion
 
 /* -----------------------------------------------------------------------------
     Task: E
